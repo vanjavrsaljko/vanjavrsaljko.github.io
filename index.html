@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanja Vrsaljko | DevOps</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Vanja Vrsaljko</h1>
+                    <p class="tagline">DevOps Engineer</p>
+                </div>
+                <nav class="main-nav">
+                    <button class="menu-toggle" aria-label="Toggle menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <ul class="nav-links">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <div class="profile-image">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="about-text">
+                        <p>DevOps Engineer with over 10 years of experience, based in Zagreb, Croatia. Specializing in infrastructure automation, CI/CD pipelines, containerization, and cloud technologies. Passionate about optimizing development workflows and ensuring system reliability.</p>
+                        <h3>Skills</h3>
+                        <div class="skills-container">
+                            <div class="skill-item">
+                                <i class="fas fa-sync-alt"></i>
+                                <span>CI/CD</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-docker"></i>
+                                <span>Docker</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-microsoft"></i>
+                                <span>Azure</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-cubes"></i>
+                                <span>Terraform</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-cogs"></i>
+                                <span>Ansible</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-linux"></i>
+                                <span>Linux</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-git-alt"></i>
+                                <span>Git</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-python"></i>
+                                <span>Python</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="experience-section">
+            <div class="container">
+                <h2>Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <i class="fas fa-circle"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Senior DevOps Engineer</h3>
+                            <p class="company">ReversingLabs</p>
+                            <p class="date">01/2022 - Present</p>
+                            <p class="description">
+                                Maintaining 60+ bare metal servers and 1000+ VMs. Key achievements include:
+                                <ul>
+                                    <li>Automated deployment of VirtualBox Windows VMs using Python, Jinja2, and Ansible, reducing deployment time from 2+ days per node to 5 days for entire cluster (30+ nodes)</li>
+                                    <li>Created custom monitoring scripts using Bash, greatly reducing failed reports</li>
+                                    <li>Introduced priority RMQ queues, reducing wait times for priority clients by a factor of 10</li>
+                                    <li>Switched from Systemd to Docker for easier deployment and management</li>
+                                    <li>Developed and maintained REST APIs using Python and Flask</li>
+                                    <li>Deployed applications to on-prem Kubernetes cluster</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <i class="fas fa-circle"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>DevOps Engineer</h3>
+                            <p class="company">ReversingLabs</p>
+                            <p class="date">07/2019 - 01/2022</p>
+                            <p class="description">
+                                Started as a DevOps Engineer before being promoted to Senior role. Focused on infrastructure automation, monitoring solutions, and CI/CD pipelines.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <i class="fas fa-circle"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Software Engineer</h3>
+                            <p class="company">Nirvana d.o.o.</p>
+                            <p class="date">03/2018 - 07/2019</p>
+                            <p class="description">
+                                Maintained software products including programs, webpages, and databases. Used JavaScript and Python for development and maintained Linux servers hosted on-premise.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <i class="fas fa-circle"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Senior Core Support Engineer/Team Lead</h3>
+                            <p class="company">Infobip</p>
+                            <p class="date">02/2016 - 03/2018</p>
+                            <p class="description">
+                                Led work shifts and ensured all tasks were completed on time. Involved in hiring process and helped implement department-wide career path improvements. Created and optimized procedures to increase productivity and quality of teamwork. Automated work using Python.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <i class="fas fa-circle"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Level 3 Support Technician</h3>
+                            <p class="company">Touch Support</p>
+                            <p class="date">08/2013 - 02/2016</p>
+                            <p class="description">
+                                Provided technical support for clients in the web hosting space. Troubleshooted application errors, handled high priority outages, and managed help desk tickets.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-icon">
+                            <i class="fas fa-dharmachakra"></i>
+                        </div>
+                        <h3>Kubernetes Migration</h3>
+                        <p>Led the migration of legacy applications to a containerized environment using Kubernetes, improving scalability and reducing deployment time by 70%.</p>
+                        <div class="project-links">
+                            <a href="#" class="btn">View Details</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <h3>CI/CD Pipeline Optimization</h3>
+                        <p>Redesigned CI/CD pipelines using GitLab CI, reducing build times by 50% and implementing automated testing and deployment.</p>
+                        <div class="project-links">
+                            <a href="#" class="btn">View Details</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-icon">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                        <h3>Infrastructure as Code</h3>
+                        <p>Implemented infrastructure as code using Terraform and Ansible, enabling consistent environment provisioning and configuration management.</p>
+                        <div class="project-links">
+                            <a href="#" class="btn">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Contact Me</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>vanjavrsaljko@gmail.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Zagreb, Croatia</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <p><a href="https://www.linkedin.com/in/vanja-vrsaljko-zagreb/" target="_blank">LinkedIn Profile</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <p><a href="https://github.com/vanjavrsaljko" target="_blank">GitHub Profile</a></p>
+                        </div>
+                    </div>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Vanja Vrsaljko. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
