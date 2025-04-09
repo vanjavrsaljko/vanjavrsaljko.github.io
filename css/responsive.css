@@ -27,7 +27,7 @@
         flex-direction: column;
     }
     
-    .contact-info, .contact-form {
+    .contact-info {
         width: 100%;
     }
 }
