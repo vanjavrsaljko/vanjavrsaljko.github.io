@@ -22,3 +22,6 @@ yarn.lock
 *.tmp
 *.bak
 *~
+
+*.pdf
+cv_updated.html
