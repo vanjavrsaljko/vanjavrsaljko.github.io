@@ -1,260 +1,543 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html class="scroll-smooth" lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vanja Vrsaljko | DevOps</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Vanja Vrsaljko | DevOps Engineer</title>
+    <meta name="description" content="Vanja Vrsaljko — Senior DevOps Engineer based in Zagreb, Croatia. Specializing in infrastructure automation, CI/CD, containerization, and cloud technologies." />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "error": "#ba1a1a",
+                        "primary-container": "#0070ea",
+                        "on-primary-fixed": "#001a41",
+                        "surface-container-low": "#f3f3f7",
+                        "on-background": "#1a1c1f",
+                        "surface-container-high": "#e8e8ec",
+                        "tertiary": "#5c5c5c",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed": "#d8e2ff",
+                        "outline-variant": "#c1c6d7",
+                        "on-error-container": "#93000a",
+                        "tertiary-container": "#757474",
+                        "on-primary-container": "#fefcff",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "secondary-fixed-dim": "#c1c7ce",
+                        "outline": "#717786",
+                        "surface-variant": "#e2e2e6",
+                        "background": "#f9f9fd",
+                        "on-error": "#ffffff",
+                        "surface-container-highest": "#e2e2e6",
+                        "surface-bright": "#f9f9fd",
+                        "on-surface-variant": "#414754",
+                        "on-secondary-container": "#5f656c",
+                        "secondary": "#595f65",
+                        "on-surface": "#1a1c1f",
+                        "surface-dim": "#d9dade",
+                        "inverse-surface": "#2e3034",
+                        "primary": "#0059bb",
+                        "secondary-container": "#dde3eb",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#fffcfb",
+                        "inverse-on-surface": "#f0f0f4",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#41474e",
+                        "inverse-primary": "#adc7ff",
+                        "on-primary-fixed-variant": "#004493",
+                        "tertiary-fixed": "#e5e2e1",
+                        "surface-container": "#ededf1",
+                        "primary-fixed-dim": "#adc7ff",
+                        "surface-tint": "#005bc0",
+                        "surface": "#f9f9fd",
+                        "on-secondary-fixed": "#161c22",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#dde3eb"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .asymmetric-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+        }
+
+        @media (max-width: 768px) {
+            .asymmetric-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
-<body>
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <h1>Vanja Vrsaljko</h1>
-                    <p class="tagline">DevOps Engineer</p>
-                </div>
-                <nav class="main-nav">
-                    <button class="menu-toggle" aria-label="Toggle menu">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                    <ul class="nav-links">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
+
+<body class="bg-background text-on-background font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+    <!-- TopNavBar -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-xl bg-slate-100/50 dark:bg-slate-900/50">
+        <div class="flex justify-between items-center max-w-7xl mx-auto px-6 py-4">
+            <a class="text-xl font-bold tracking-tighter text-slate-900 dark:text-slate-50 font-['Space_Grotesk'] tracking-tight"
+                href="#">Vanja Vrsaljko</a>
+            <div class="hidden md:flex items-center gap-8 font-['Space_Grotesk'] tracking-tight">
+                <a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors"
+                    href="#experience">Experience</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors"
+                    href="#skills">Skills</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors"
+                    href="#projects">Projects</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors"
+                    href="#contact">Contact</a>
             </div>
+            <a href="mailto:vanjavrsaljko@gmail.com"
+                class="bg-primary text-on-primary px-6 py-2 rounded-lg font-medium hover:bg-primary-container transition-all active:scale-95 duration-200 ease-in-out">
+                Hire Me
+            </a>
         </div>
-    </header>
-
-    <main>
-        <section id="about" class="about-section">
-            <div class="container">
-                <h2>About Me</h2>
-                <div class="about-content">
-                    <div class="profile-image">
-                        <!-- Image will be set via CSS background -->
+    </nav>
+    <main class="pt-24">
+        <!-- Hero Section -->
+        <section class="max-w-7xl mx-auto px-6 py-20 md:py-32">
+            <div class="asymmetric-grid gap-16 items-center">
+                <div class="space-y-8">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high text-primary font-medium text-sm">
+                        <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                        Available for new opportunities
                     </div>
-                    <div class="about-text">
-                        <p>DevOps Engineer with over 10 years of experience, based in Zagreb, Croatia. Specializing in infrastructure automation, CI/CD pipelines, containerization, and cloud technologies. Passionate about optimizing development workflows and ensuring system reliability.</p>
-                        <h3>Skills</h3>
-                        <div class="skills-container">
-                            <div class="skill-item">
-                                <i class="fas fa-sync-alt"></i>
-                                <span>CI/CD</span>
-                            </div>
-                            <div class="skill-item">
-                                <i class="fab fa-docker"></i>
-                                <span>Docker</span>
-                            </div>
-                            <div class="skill-item">
-                                <i class="fab fa-microsoft"></i>
-                                <span>Azure</span>
-                            </div>
-                            <div class="skill-item">
-                                <i class="fas fa-cogs"></i>
-                                <span>Ansible</span>
-                            </div>
-                            <div class="skill-item">
-                                <i class="fab fa-linux"></i>
-                                <span>Linux</span>
-                            </div>
-                            <div class="skill-item">
-                                <i class="fab fa-git-alt"></i>
-                                <span>Git</span>
-                            </div>
-                            <div class="skill-item">
-                                <i class="fab fa-python"></i>
-                                <span>Python</span>
-                            </div>
-                            <div class="skill-item">
-                                <i class="fas fa-terminal"></i>
-                                <span>Bash</span>
-                            </div>
-                            <div class="skill-item">
-                                <i class="fas fa-database"></i>
-                                <span>SQL/Supabase</span>
-                            </div>
-                            <div class="skill-item">
-                                <i class="fas fa-network-wired"></i>
-                                <span>Traefik</span>
-                            </div>
-                            <div class="skill-item">
-                                <i class="fas fa-server"></i>
-                                <span>Redis</span>
-                            </div>
-                            <div class="skill-item">
-                                <i class="fas fa-chart-line"></i>
-                                <span>Monitoring</span>
-                            </div>
-                            <div class="skill-item">
-                                <i class="fas fa-hdd"></i>
-                                <span>Web Servers</span>
-                            </div>
-                            <div class="skill-item">
-                                <i class="fab fa-aws"></i>
-                                <span>AWS</span>
-                            </div>
-                            <div class="skill-item">
-                                <i class="fas fa-layer-group"></i>
-                                <span>Terraform</span>
-                            </div>
+                    <h1
+                        class="text-6xl md:text-8xl font-headline font-bold text-on-surface leading-[0.9] tracking-tighter">
+                        Architecting <br />
+                        <span class="text-primary italic">Resilient</span> Systems.
+                    </h1>
+                    <p class="text-xl text-on-surface-variant max-w-xl leading-relaxed">
+                        Senior DevOps Engineer with 10+ years of experience specializing in infrastructure automation, CI/CD pipelines, containerization, and cloud technologies. Building the invisible foundations that keep world-class applications running 24/7.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#experience"
+                            class="bg-primary text-on-primary px-8 py-4 rounded-lg font-bold flex items-center gap-2 hover:shadow-xl transition-all">
+                            View Experience
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                        <a href="#contact"
+                            class="bg-surface-container-high text-on-surface px-8 py-4 rounded-lg font-bold hover:bg-surface-container-highest transition-all">
+                            Get In Touch
+                        </a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div
+                        class="absolute -inset-4 bg-primary/5 rounded-[2rem] blur-2xl group-hover:bg-primary/10 transition-colors">
+                    </div>
+                    <div class="relative rounded-2xl overflow-hidden bg-surface-container-low aspect-[4/5] shadow-2xl">
+                        <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                            alt="Professional portrait of Vanja Vrsaljko, DevOps Engineer"
+                            src="img/1594294368988.jpeg" />
+                        <div
+                            class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-on-background/80 to-transparent">
+                            <p class="text-on-primary font-headline text-2xl font-bold">Vanja Vrsaljko</p>
+                            <p class="text-on-primary/70">Senior DevOps Engineer</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="experience" class="experience-section">
-            <div class="container">
-                <h2>Experience</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-marker">
-                            <i class="fas fa-circle"></i>
-                        </div>
-                        <div class="timeline-content">
-                            <h3>Senior DevOps Engineer</h3>
-                            <p class="company">Rearm d.o.o.</p>
-                            <p class="date">2025 - Present</p>
-                            <p class="description">
-                                Leading DevOps initiatives and cloud infrastructure development:
-                                <ul>
-                                    <li>Developing backup and data management services using TypeScript, Supabase, and SQL</li>
-                                    <li>Creating domain testing and integration testing services using Python</li>
-                                    <li>Deploying Docker Swarm clusters on Azure VMs with custom networking. Using VMSS for auto scaling</li>
-                                    <li>Setting up Traefik proxies for service routing and load balancing</li>
-                                    <li>Implementing Redis for improved websocket communication and state management</li>
-                                    <li>Designing and maintaining CI/CD pipelines for all services and applications.</li>
-                                    <li>Deploying and managing Azure infrastructure using Ansible and Terraform</li>
-                                    <li>Working with AWS services including S3, EC2, IAM, Route 53, Lambda, ECS, and DynamoDB</li>
-                                </ul>
-                            </p>
+        <!-- Core Competencies / Skills -->
+        <section class="bg-surface-container-low py-32" id="skills">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+                    <div class="max-w-2xl">
+                        <h2 class="text-4xl md:text-6xl font-headline font-bold tracking-tight mb-6">Technical
+                            <br /><span class="text-primary">Ecosystem.</span></h2>
+                        <p class="text-lg text-on-surface-variant">Strategic implementation of infrastructure-as-code
+                            and cloud-native patterns to accelerate delivery cycles.</p>
+                    </div>
+                    <div class="hidden md:block text-right">
+                        <span class="font-headline text-8xl font-black text-outline-variant/20 select-none">STACK</span>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Infrastructure & Orchestration -->
+                    <div
+                        class="bg-surface-container-lowest p-10 rounded-xl shadow-sm hover:shadow-md transition-all border border-outline-variant/15">
+                        <span class="material-symbols-outlined text-4xl text-primary mb-6">hub</span>
+                        <h3 class="text-2xl font-headline font-bold mb-4">Infrastructure</h3>
+                        <p class="text-on-surface-variant mb-8 leading-relaxed">Expert management of containerized
+                            environments, cluster orchestration, and cloud provisioning.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1 rounded-full bg-surface-container-high text-xs font-bold uppercase tracking-wider">Docker</span>
+                            <span
+                                class="px-3 py-1 rounded-full bg-surface-container-high text-xs font-bold uppercase tracking-wider">Kubernetes</span>
+                            <span
+                                class="px-3 py-1 rounded-full bg-surface-container-high text-xs font-bold uppercase tracking-wider">Terraform</span>
+                            <span
+                                class="px-3 py-1 rounded-full bg-surface-container-high text-xs font-bold uppercase tracking-wider">Ansible</span>
+                            <span
+                                class="px-3 py-1 rounded-full bg-surface-container-high text-xs font-bold uppercase tracking-wider">Traefik</span>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker">
-                            <i class="fas fa-circle"></i>
-                        </div>
-                        <div class="timeline-content">
-                            <h3>Senior DevOps Engineer</h3>
-                            <p class="company">ReversingLabs</p>
-                            <p class="date">01/2022 - 2025</p>
-                            <p class="description">
-                                Maintaining 60+ bare metal servers and 1000+ VMs. Key achievements include:
-                                <ul>
-                                    <li>Automated deployment of VirtualBox Windows VMs using Python, Jinja2, and Ansible, reducing deployment time from 2+ days per node to 5 days for entire cluster (30+ nodes)</li>
-                                    <li>Created custom monitoring scripts using Bash, greatly reducing failed reports</li>
-                                    <li>Introduced priority RMQ queues, reducing wait times for priority clients by a factor of 10</li>
-                                    <li>Switched from Systemd to Docker for easier deployment and management</li>
-                                    <li>Developed and maintained REST APIs using Python and Flask</li>
-                                    <li>Deployed applications to on-prem Kubernetes cluster</li>
-                                </ul>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker">
-                            <i class="fas fa-circle"></i>
-                        </div>
-                        <div class="timeline-content">
-                            <h3>DevOps Engineer</h3>
-                            <p class="company">ReversingLabs</p>
-                            <p class="date">07/2019 - 01/2022</p>
-                            <p class="description">
-                                Started as a DevOps Engineer before being promoted to Senior role. Focused on infrastructure automation, monitoring solutions, and CI/CD pipelines.
-                            </p>
+                    <!-- Cloud & Platforms -->
+                    <div
+                        class="bg-surface-container-lowest p-10 rounded-xl shadow-sm hover:shadow-md transition-all border border-outline-variant/15">
+                        <span class="material-symbols-outlined text-4xl text-primary mb-6">cloud</span>
+                        <h3 class="text-2xl font-headline font-bold mb-4">Cloud & Platforms</h3>
+                        <p class="text-on-surface-variant mb-8 leading-relaxed">Provisioning production-grade cloud
+                            infrastructure with high security standards across multiple providers.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1 rounded-full bg-surface-container-high text-xs font-bold uppercase tracking-wider">AWS</span>
+                            <span
+                                class="px-3 py-1 rounded-full bg-surface-container-high text-xs font-bold uppercase tracking-wider">Azure</span>
+                            <span
+                                class="px-3 py-1 rounded-full bg-surface-container-high text-xs font-bold uppercase tracking-wider">Linux</span>
+                            <span
+                                class="px-3 py-1 rounded-full bg-surface-container-high text-xs font-bold uppercase tracking-wider">Supabase</span>
+                            <span
+                                class="px-3 py-1 rounded-full bg-surface-container-high text-xs font-bold uppercase tracking-wider">Redis</span>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker">
-                            <i class="fas fa-circle"></i>
-                        </div>
-                        <div class="timeline-content">
-                            <h3>Software Engineer</h3>
-                            <p class="company">Nirvana d.o.o.</p>
-                            <p class="date">03/2018 - 07/2019</p>
-                            <p class="description">
-                                Maintained software products including programs, webpages, and databases. Used JavaScript and Python for development and maintained Linux servers hosted on-premise.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker">
-                            <i class="fas fa-circle"></i>
-                        </div>
-                        <div class="timeline-content">
-                            <h3>Senior Core Support Engineer/Team Lead</h3>
-                            <p class="company">Infobip</p>
-                            <p class="date">02/2016 - 03/2018</p>
-                            <p class="description">
-                                Led work shifts and ensured all tasks were completed on time. Involved in hiring process and helped implement department-wide career path improvements. Created and optimized procedures to increase productivity and quality of teamwork. Automated work using Python.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker">
-                            <i class="fas fa-circle"></i>
-                        </div>
-                        <div class="timeline-content">
-                            <h3>Level 3 Support Technician</h3>
-                            <p class="company">Touch Support</p>
-                            <p class="date">08/2013 - 02/2016</p>
-                            <p class="description">
-                                Provided technical support for clients in the web hosting space. Troubleshooted application errors, handled high priority outages, and managed help desk tickets.
-                            </p>
+                    <!-- CI/CD & Development -->
+                    <div
+                        class="bg-surface-container-lowest p-10 rounded-xl shadow-sm hover:shadow-md transition-all border border-outline-variant/15">
+                        <span class="material-symbols-outlined text-4xl text-primary mb-6">settings_input_component</span>
+                        <h3 class="text-2xl font-headline font-bold mb-4">CI/CD & Dev</h3>
+                        <p class="text-on-surface-variant mb-8 leading-relaxed">End-to-end automation pipelines,
+                            monitoring, and development tooling for reliable delivery.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1 rounded-full bg-surface-container-high text-xs font-bold uppercase tracking-wider">CI/CD</span>
+                            <span
+                                class="px-3 py-1 rounded-full bg-surface-container-high text-xs font-bold uppercase tracking-wider">Git</span>
+                            <span
+                                class="px-3 py-1 rounded-full bg-surface-container-high text-xs font-bold uppercase tracking-wider">Python</span>
+                            <span
+                                class="px-3 py-1 rounded-full bg-surface-container-high text-xs font-bold uppercase tracking-wider">Bash</span>
+                            <span
+                                class="px-3 py-1 rounded-full bg-surface-container-high text-xs font-bold uppercase tracking-wider">Monitoring</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="contact-section">
-            <div class="container">
-                <h2>Contact Me</h2>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <p>vanjavrsaljko@gmail.com</p>
+        <!-- Experience: The Timeline -->
+        <section class="py-32" id="experience">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-4xl md:text-6xl font-headline font-bold tracking-tight mb-20 text-center">Professional
+                    <span class="text-primary">Timeline.</span></h2>
+                <div
+                    class="space-y-24 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-primary before:via-surface-container-highest before:to-transparent">
+
+                    <!-- Item 1: Rearm -->
+                    <div
+                        class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div
+                            class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-on-primary shadow md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                            <span class="material-symbols-outlined text-lg"
+                                style="font-variation-settings: 'FILL' 1;">work</span>
                         </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <p>+385 91 539 8770</p>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <p>Zagreb, Croatia</p>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fab fa-linkedin"></i>
-                            <p><a href="https://www.linkedin.com/in/vanja-vrsaljko-zagreb/" target="_blank">Linkedin Profile</a></p>
+                        <div
+                            class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-surface-container-low p-8 rounded-xl border border-outline-variant/10 shadow-sm">
+                            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
+                                <time class="font-headline font-bold text-primary">2025 — PRESENT</time>
+                                <span
+                                    class="text-sm font-bold text-on-surface-variant uppercase tracking-widest bg-surface-container-highest px-3 py-1 rounded">Senior
+                                    DevOps</span>
+                            </div>
+                            <h4 class="text-2xl font-headline font-bold mb-2">Rearm d.o.o.</h4>
+                            <p class="text-on-surface-variant leading-relaxed mb-3">Leading DevOps initiatives and cloud infrastructure development.</p>
+                            <ul class="text-on-surface-variant text-sm space-y-1.5 list-disc list-inside">
+                                <li>Developing backup and data management services using TypeScript, Supabase, and SQL</li>
+                                <li>Creating domain testing and integration testing services using Python</li>
+                                <li>Deploying Docker Swarm clusters on Azure VMs with custom networking. Using VMSS for auto scaling</li>
+                                <li>Setting up Traefik proxies for service routing and load balancing</li>
+                                <li>Implementing Redis for improved websocket communication and state management</li>
+                                <li>Designing and maintaining CI/CD pipelines for all services and applications</li>
+                                <li>Deploying and managing Azure infrastructure using Ansible and Terraform</li>
+                                <li>Working with AWS services including S3, EC2, IAM, Route 53, Lambda, ECS, and DynamoDB</li>
+                            </ul>
                         </div>
                     </div>
+
+                    <!-- Item 2: ReversingLabs Senior -->
+                    <div
+                        class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div
+                            class="flex items-center justify-center w-10 h-10 rounded-full bg-surface-container-highest text-primary shadow md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                            <span class="material-symbols-outlined text-lg">history</span>
+                        </div>
+                        <div
+                            class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-surface-container-low p-8 rounded-xl border border-outline-variant/10 shadow-sm">
+                            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
+                                <time class="font-headline font-bold text-on-surface-variant">01/2022 — 2025</time>
+                                <span
+                                    class="text-sm font-bold text-on-surface-variant uppercase tracking-widest bg-surface-container-highest px-3 py-1 rounded">Senior
+                                    DevOps</span>
+                            </div>
+                            <h4 class="text-2xl font-headline font-bold mb-2">ReversingLabs</h4>
+                            <p class="text-on-surface-variant leading-relaxed mb-3">Maintaining 60+ bare metal servers and 1000+ VMs.</p>
+                            <ul class="text-on-surface-variant text-sm space-y-1.5 list-disc list-inside">
+                                <li>Automated deployment of VirtualBox Windows VMs using Python, Jinja2, and Ansible — reducing deployment time from 2+ days/node to 5 days for entire cluster (30+ nodes)</li>
+                                <li>Created custom monitoring scripts using Bash, greatly reducing failed reports</li>
+                                <li>Introduced priority RMQ queues, reducing wait times for priority clients by 10×</li>
+                                <li>Switched from Systemd to Docker for easier deployment and management</li>
+                                <li>Developed and maintained REST APIs using Python and Flask</li>
+                                <li>Deployed applications to on-prem Kubernetes cluster</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: ReversingLabs Junior -->
+                    <div
+                        class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div
+                            class="flex items-center justify-center w-10 h-10 rounded-full bg-surface-container-highest text-primary shadow md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                            <span class="material-symbols-outlined text-lg">terminal</span>
+                        </div>
+                        <div
+                            class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-surface-container-low p-8 rounded-xl border border-outline-variant/10 shadow-sm">
+                            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
+                                <time class="font-headline font-bold text-on-surface-variant">07/2019 — 01/2022</time>
+                                <span
+                                    class="text-sm font-bold text-on-surface-variant uppercase tracking-widest bg-surface-container-highest px-3 py-1 rounded">DevOps
+                                    Engineer</span>
+                            </div>
+                            <h4 class="text-2xl font-headline font-bold mb-2">ReversingLabs</h4>
+                            <p class="text-on-surface-variant leading-relaxed">Started as a DevOps Engineer before being promoted to Senior role. Focused on infrastructure automation, monitoring solutions, and CI/CD pipelines.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 4: Nirvana -->
+                    <div
+                        class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div
+                            class="flex items-center justify-center w-10 h-10 rounded-full bg-surface-container-highest text-primary shadow md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                            <span class="material-symbols-outlined text-lg">code</span>
+                        </div>
+                        <div
+                            class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-surface-container-low p-8 rounded-xl border border-outline-variant/10 shadow-sm">
+                            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
+                                <time class="font-headline font-bold text-on-surface-variant">03/2018 — 07/2019</time>
+                                <span
+                                    class="text-sm font-bold text-on-surface-variant uppercase tracking-widest bg-surface-container-highest px-3 py-1 rounded">Software
+                                    Engineer</span>
+                            </div>
+                            <h4 class="text-2xl font-headline font-bold mb-2">Nirvana d.o.o.</h4>
+                            <p class="text-on-surface-variant leading-relaxed">Maintained software products including programs, webpages, and databases. Used JavaScript and Python for development and maintained Linux servers hosted on-premise.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 5: Infobip -->
+                    <div
+                        class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div
+                            class="flex items-center justify-center w-10 h-10 rounded-full bg-surface-container-highest text-primary shadow md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                            <span class="material-symbols-outlined text-lg">groups</span>
+                        </div>
+                        <div
+                            class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-surface-container-low p-8 rounded-xl border border-outline-variant/10 shadow-sm">
+                            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
+                                <time class="font-headline font-bold text-on-surface-variant">02/2016 — 03/2018</time>
+                                <span
+                                    class="text-sm font-bold text-on-surface-variant uppercase tracking-widest bg-surface-container-highest px-3 py-1 rounded">Team
+                                    Lead</span>
+                            </div>
+                            <h4 class="text-2xl font-headline font-bold mb-2">Infobip</h4>
+                            <p class="text-on-surface-variant leading-relaxed">Senior Core Support Engineer / Team Lead. Led work shifts and ensured all tasks were completed on time. Involved in hiring process and helped implement department-wide career path improvements. Created and optimized procedures to increase productivity and quality of teamwork. Automated work using Python.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 6: Touch Support -->
+                    <div
+                        class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div
+                            class="flex items-center justify-center w-10 h-10 rounded-full bg-surface-container-highest text-primary shadow md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                            <span class="material-symbols-outlined text-lg">support_agent</span>
+                        </div>
+                        <div
+                            class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-surface-container-low p-8 rounded-xl border border-outline-variant/10 shadow-sm">
+                            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
+                                <time class="font-headline font-bold text-on-surface-variant">08/2013 — 02/2016</time>
+                                <span
+                                    class="text-sm font-bold text-on-surface-variant uppercase tracking-widest bg-surface-container-highest px-3 py-1 rounded">L3
+                                    Support</span>
+                            </div>
+                            <h4 class="text-2xl font-headline font-bold mb-2">Touch Support</h4>
+                            <p class="text-on-surface-variant leading-relaxed">Level 3 Support Technician. Provided technical support for clients in the web hosting space. Troubleshooted application errors, handled high priority outages, and managed help desk tickets.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Grid (Bento Style) -->
+        <section class="bg-surface-container-low py-32" id="projects">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="mb-20">
+                    <h2 class="text-4xl md:text-6xl font-headline font-bold tracking-tight mb-4">Featured <br /> <span
+                            class="text-primary">Projects.</span></h2>
+                    <p class="text-on-surface-variant max-w-xl">A selection of technical projects focusing on
+                        scalability, security, and automation.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-6 h-full">
+                    <!-- Project 1 (Large): Docker Swarm on Azure -->
+                    <div
+                        class="md:col-span-2 md:row-span-2 bg-surface-container-lowest rounded-xl overflow-hidden group border border-outline-variant/10 flex flex-col">
+                        <div class="h-64 overflow-hidden bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-primary text-[120px] opacity-30 group-hover:opacity-50 group-hover:scale-110 transition-all duration-700">cloud_circle</span>
+                        </div>
+                        <div class="p-8 flex-grow flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-3xl font-headline font-bold mb-4">Docker Swarm on Azure</h3>
+                                <p class="text-on-surface-variant mb-6">Production Docker Swarm clusters deployed on Azure VMs with custom networking, Traefik proxy routing, VMSS auto-scaling, and Redis-powered websocket communication.</p>
+                            </div>
+                            <div class="flex justify-between items-center mt-auto">
+                                <div class="flex gap-2 flex-wrap">
+                                    <span
+                                        class="text-xs font-bold px-2 py-1 bg-primary/10 text-primary rounded">AZURE</span>
+                                    <span
+                                        class="text-xs font-bold px-2 py-1 bg-primary/10 text-primary rounded">DOCKER</span>
+                                    <span
+                                        class="text-xs font-bold px-2 py-1 bg-primary/10 text-primary rounded">TRAEFIK</span>
+                                    <span
+                                        class="text-xs font-bold px-2 py-1 bg-primary/10 text-primary rounded">REDIS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 2: VM Automation -->
+                    <div
+                        class="md:col-span-2 bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/10 hover:shadow-lg transition-all">
+                        <div class="flex justify-between mb-4">
+                            <span class="material-symbols-outlined text-primary">auto_awesome</span>
+                            <span class="text-xs font-bold text-outline uppercase tracking-widest">Automation</span>
+                        </div>
+                        <h3 class="text-2xl font-headline font-bold mb-2">VM Deployment Automation</h3>
+                        <p class="text-on-surface-variant">Automated provisioning of VirtualBox Windows VMs using Python, Jinja2, and Ansible — cutting deployment time from 2+ days/node to 5 days for a 30+ node cluster.</p>
+                    </div>
+                    <!-- Project 3: Infrastructure as Code -->
+                    <div
+                        class="md:col-span-2 bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/10 hover:shadow-lg transition-all">
+                        <div class="flex justify-between mb-4">
+                            <span class="material-symbols-outlined text-primary">security</span>
+                            <span class="text-xs font-bold text-outline uppercase tracking-widest">IaC</span>
+                        </div>
+                        <h3 class="text-2xl font-headline font-bold mb-2">Multi-Cloud IaC Pipeline</h3>
+                        <p class="text-on-surface-variant">Terraform and Ansible-driven infrastructure provisioning across AWS and Azure with CI/CD integration, covering S3, EC2, IAM, Route 53, Lambda, ECS, and DynamoDB.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA / Contact Section -->
+        <section class="py-32" id="contact">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <div class="mb-12">
+                    <span class="text-primary font-bold tracking-[0.2em] uppercase text-sm">Let's connect</span>
+                    <h2 class="text-5xl md:text-7xl font-headline font-bold tracking-tighter mt-4">Ready to scale your
+                        <span class="italic text-primary">infrastructure</span>?</h2>
+                </div>
+                <div class="bg-surface-container-low p-10 md:p-16 rounded-[2.5rem] relative overflow-hidden">
+                    <div
+                        class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl">
+                    </div>
+                    <p class="text-xl text-on-surface-variant mb-10 leading-relaxed">
+                        Currently open to consulting opportunities and full-time senior DevOps / SRE roles
+                        in high-performance engineering teams.
+                    </p>
+                    <!-- Contact Details -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-left mb-10 max-w-lg mx-auto">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">mail</span>
+                            <a href="mailto:vanjavrsaljko@gmail.com" class="text-on-surface hover:text-primary transition-colors">vanjavrsaljko@gmail.com</a>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">phone</span>
+                            <a href="tel:+385915398770" class="text-on-surface hover:text-primary transition-colors">+385 91 539 8770</a>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">location_on</span>
+                            <span class="text-on-surface">Zagreb, Croatia</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">link</span>
+                            <a href="https://www.linkedin.com/in/vanja-vrsaljko-zagreb/" target="_blank" class="text-on-surface hover:text-primary transition-colors">LinkedIn Profile</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row justify-center gap-6">
+                        <a class="bg-primary text-on-primary px-10 py-5 rounded-lg font-bold text-lg hover:shadow-2xl transition-all"
+                            href="mailto:vanjavrsaljko@gmail.com">
+                            Say Hello
+                        </a>
+                        <div class="flex items-center gap-4 justify-center">
+                            <a class="w-14 h-14 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all"
+                                href="https://www.linkedin.com/in/vanja-vrsaljko-zagreb/" target="_blank" aria-label="LinkedIn">
+                                <span class="material-symbols-outlined">link</span>
+                            </a>
+                            <a class="w-14 h-14 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all"
+                                href="https://github.com/vanjavrsaljko" target="_blank" aria-label="GitHub">
+                                <span class="material-symbols-outlined">code</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Vanja Vrsaljko. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/vanja-vrsaljko-zagreb/" target="_blank" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/vanjavrsaljko" target="_blank" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
+    <!-- Footer -->
+    <footer
+        class="w-full py-12 mt-24 bg-slate-100 dark:bg-slate-900">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-8 gap-6 font-['Inter'] text-sm tracking-wide">
+            <div class="space-y-2">
+                <span class="text-lg font-black text-slate-900 dark:text-slate-50">Vanja Vrsaljko</span>
+                <p class="text-slate-500 dark:text-slate-500">© 2025 Vanja Vrsaljko. Built for High-Availability.</p>
+            </div>
+            <div class="flex gap-8">
+                <a class="text-slate-500 dark:text-slate-500 hover:text-blue-600 dark:hover:text-blue-300 transition-colors opacity-80 hover:opacity-100"
+                    href="https://github.com/vanjavrsaljko" target="_blank">GitHub</a>
+                <a class="text-slate-500 dark:text-slate-500 hover:text-blue-600 dark:hover:text-blue-300 transition-colors opacity-80 hover:opacity-100"
+                    href="https://www.linkedin.com/in/vanja-vrsaljko-zagreb/" target="_blank">LinkedIn</a>
+            </div>
+            <div class="text-right">
+                <p class="text-xs text-slate-400 font-medium uppercase tracking-[0.2em]">Location</p>
+                <p class="text-on-surface">Zagreb, Croatia</p>
             </div>
         </div>
     </footer>
-
 </body>
+
 </html>

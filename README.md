@@ -1,38 +1,43 @@
 # Vanja Vrsaljko - CV Website
 
-A modern, responsive personal CV website built with HTML, CSS, and vanilla JavaScript. This project uses a mobile-first approach and leverages Font Awesome for icons and Google Fonts for typography.
+A modern, responsive one-page CV website built with Tailwind CSS, featuring a Material Design 3 color palette, Space Grotesk + Inter typography, and smooth scroll navigation.
 
 ## Features
 
 - Responsive design that works on all devices
-- Mobile-first approach
-- Professional icons using Font Awesome
-- Poppins font from Google Fonts
-- Smooth scrolling navigation
-- Contact form with validation
-- Timeline for detailed experience section
-- Project showcase with custom styling
+- Frosted glass sticky navigation bar
+- Asymmetric hero section with profile photo
+- Skills section with three categorized cards (Infrastructure, Cloud & Platforms, CI/CD & Dev)
+- Alternating professional timeline with 6 career entries
+- Bento-style featured projects grid
+- Contact/CTA section with real contact details
+- Material Symbols Outlined icons
+- Smooth scrolling via CSS `scroll-smooth`
 
 ## Project Structure
 
 ```
 vanjavrsaljko_cv_web/
-├── index.html          # Main HTML file
+├── index.html          # Main HTML file (Tailwind CSS)
 ├── css/
-│   ├── styles.css      # Main styles
-│   └── responsive.css  # Responsive design styles
+│   ├── styles.css      # Legacy styles (unused)
+│   └── responsive.css  # Legacy responsive styles (unused)
 ├── js/
-│   └── main.js         # Main JavaScript functionality
+│   └── main.js         # Legacy JavaScript (unused)
+├── img/
+│   └── 1594294368988.jpeg  # Profile photo
+├── favicon.svg
+├── new-design.html     # Design reference from 3rd party
 └── README.md           # Project documentation
 ```
 
 ## Technologies Used
 
 - HTML5
-- CSS3 (Flexbox and Grid)
-- Vanilla JavaScript
-- Font Awesome icons
-- Google Fonts (Poppins)
+- [Tailwind CSS](https://tailwindcss.com/) (CDN)
+- [Google Fonts](https://fonts.google.com/) (Space Grotesk, Inter)
+- [Material Symbols Outlined](https://fonts.google.com/icons)
+- Material Design 3 color tokens
 
 ## Getting Started
 
@@ -47,23 +52,17 @@ vanjavrsaljko_cv_web/
 
 ### Updating Content
 
-To update the content of your CV, edit the `index.html` file. The placeholders for your information are organized in sections:
+Edit `index.html` directly. The page is organized into these sections:
 
-- About
-- Experience
-- Projects
-- Contact
-
-### Adding or Changing Icons
-
-The website uses Font Awesome for icons. To change an icon:
-
-1. Find the desired icon on [Font Awesome's website](https://fontawesome.com/icons)
-2. Replace the existing icon class (e.g., `<i class="fas fa-cogs"></i>`) with your chosen icon
+- **Hero** — Name, title, tagline, CTA buttons, profile image
+- **Skills** — Three categorized card grid with technology tags
+- **Experience** — Alternating timeline with career history
+- **Projects** — Bento-style grid of featured projects
+- **Contact** — CTA with email, phone, location, LinkedIn
 
 ### Styling
 
-The website uses CSS variables for consistent styling. You can change the color scheme by modifying the variables in the `:root` selector in `styles.css`.
+The site uses Tailwind CSS with a custom theme defined inline in the `<script id="tailwind-config">` block. To change the color scheme, modify the color tokens there. The palette follows Material Design 3 conventions.
 
 ## Browser Compatibility
 
